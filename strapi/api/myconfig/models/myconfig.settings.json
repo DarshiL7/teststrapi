@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test",
+  "info": {
+    "name": "myconfig",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "testname": {
+      "type": "string"
+    },
+    "test": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

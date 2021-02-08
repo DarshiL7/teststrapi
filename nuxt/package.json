@@ -1,0 +1,36 @@
+{
+  "name": "rx-nuxt-tailwind-strapi",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "cross-env Host=0.0.0.0  nuxt",
+    "build": "nuxt build",
+    "start": "cross-env Host=0.0.0.0 nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxt/http": "^0.6.2",
+    "@nuxtjs/auth": "^4.9.1",
+    "@nuxtjs/axios": "^5.12.5",
+    "@nuxtjs/color-mode": "1.0.3",
+    "@nuxtjs/component-cache": "^1.1.6",
+    "@nuxtjs/google-fonts": "^1.2.0",
+    "@nuxtjs/gtm": "^2.4.0",
+    "@nuxtjs/markdownit": "^1.2.10",
+    "@nuxtjs/redirect-module": "^0.3.1",
+    "@nuxtjs/strapi": "^0.1.10",
+    "@nuxtjs/tailwindcss": "3.0.0",
+    "cross-env": "^5.2.0",
+    "node-sass": "^4.10",
+    "nuxt": "2.14.1",
+    "nuxt-purgecss": "^1.0.0",
+    "sass-loader": "^10.1.1",
+    "shrink-ray-current": "^4.1.2",
+    "tailwindcss-dark-mode": "1.1.5",
+    "vue-slick-carousel": "^1.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "keywords": []
+}

@@ -1,0 +1,45 @@
+@import 'arguments';
+
+
+@include font-face('poppinsbold', 'Poppins-Bold');
+@include font-face('poppinsregular', 'Poppins-Regular');
+@include font-face('poppinssemibold', 'Poppins-SemiBold');
+@include font-face('poppinsextrabold', 'Poppins-ExtraBold');
+@include font-face('poppinsmedium', 'Poppins-Medium');
+ 
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+@mixin fontSize($size, $is_imp: false) {
+   @if $is_imp == false {
+        font-size: $size;
+		font-size: calculateRem($size);
+    } @else {
+        font-size: $size !important;
+		font-size: calculateRem($size) !important;
+    }
+}
+
+$bold:'poppinsbold', sans-serif;
+$regular: 'poppinsregular';
+$semibold: 'poppins-semibold';
+$light:  'poppins-light';
+$medium: 'poppinsmedium'; 
+$extrabold: 'poppins-extrabold', sans-serif;
+$italic: 'poppins-italic';
+
+p { font-family: $regular;	 margin: 0;font-family: $regular; }
+a {
+	font-family: $regular;
+	cursor: pointer;
+}
+
+p.smallFont {
+    
+	@include fontSize(12px);
+	line-height: 16px;
+}
+
+.varadBold { font-family: $bold; }
+

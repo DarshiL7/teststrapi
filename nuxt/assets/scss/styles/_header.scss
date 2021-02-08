@@ -1,0 +1,16 @@
+.navbar {
+    ul {
+        li {
+            a{
+                font-family: $medium;
+                @include fontSize(22px);
+                line-height: 30px;
+                @include transition(all 0.3s ease-in-out);
+                &:hover {
+                    color: #ff533d;
+                }
+            }
+            padding: 0 25px;
+        }
+    }
+}

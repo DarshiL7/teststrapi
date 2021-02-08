@@ -1,0 +1,304 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import '_variable.scss';
+@import '_arguments.scss';
+@import '_fonts.scss';
+/* @import '_header.scss'; */
+
+
+@layer components {
+    div {
+      @apply font-ptreg;
+    }
+    .dark{
+      [class*="dark:"] {
+        * {
+          @apply text-white;
+        }      
+      }
+    }
+    h1,
+    .h1 {
+      @apply text-3xl font-ptsemi leading-tight;
+    }
+    h2,
+    .h2 {
+      @apply text-2xl font-ptsemi pb-4 leading-normal;
+    }
+    h3,
+    .h3 {
+      @apply text-2xl font-ptsemi pb-2 leading-normal;
+    }
+    h4,
+    .h4 {
+      @apply text-xl  font-ptreg leading-normal;
+    }
+    h5,
+    .h5,
+    .sm_h3 {
+      @apply text-lg font-ptreg;
+    }
+    h6,
+    .h6 {
+      @apply text-lg font-ptreg;
+    }
+    @screen md {
+      h1,
+      .h1 {
+        @apply text-5xl;
+      }
+      h2,
+      .h2 {
+        @apply text-4xl;
+      }
+      h3,
+      .h3 {
+        @apply text-3xl;
+      }
+      h4,
+      .h4 {
+        @apply text-2xl;
+      }
+      h5,
+      .h5,
+      .sm_h3 {
+        @apply text-xl;
+      }
+      h6,
+      .h6 {
+        @apply text-lg;
+      }
+    }
+    @screen lg {
+      h1,
+      .h1 {
+        @apply text-6xl;
+      }
+      h2,
+      .h2 {
+        @apply text-5xl pb-6;
+      }
+      h3,
+      .h3 {
+        @apply text-4xl;
+      }
+      h4,
+      .h4 {
+        @apply text-3xl;
+      }
+      h5,
+      .h5,
+      .sm_h3 {
+        @apply text-2xl;
+      }
+      h6,
+      .h6 {
+        @apply text-xl;
+      }
+    }
+    // Paragraphs
+  
+    .para_xl p,
+    .para_xl {
+      @apply text-xl font-ptsemi leading-tight;
+    }
+    .para_lg_semib p,
+    .para_lg_semib {
+      @apply text-xl font-ptsemi leading-normal;
+    }
+    .para_lg p,
+    .para_lg {
+      @apply text-lg font-ptreg leading-tight;
+    }
+    .para_md_semib p,
+    .para_md_semib {
+      @apply text-lg font-ptsemi leading-normal;
+    }
+    .para_md p,
+    .para_md {
+      @apply text-base font-ptreg leading-normal;
+    }
+    .para_sm p,
+    .para_sm {
+      @apply text-sm font-ptreg;
+    }
+    p {
+      @apply text-sm font-ptreg;
+    }
+    .para_xs p,
+    .para_xs {
+      @apply text-sm font-ptreg;
+    }
+  
+    @screen md {
+      .para_xl p,
+      .para_xl {
+        @apply text-4xl;
+      }
+      .para_lg_semib p,
+      .para_lg_semib {
+        @apply text-2xl;
+      }
+      .para_lg p,
+      .para_lg {
+        @apply text-2xl;
+      }
+      .para_md_semib p,
+      .para_md_semib {
+        @apply text-xl;
+      }
+      .para_md p,
+      .para_md {
+        @apply text-xl;
+      }
+      .para_sm p,
+      .para_sm {
+        @apply text-lg;
+      }
+      p {
+        @apply text-base;
+      }
+      .para_xs p,
+      .para_xs {
+        @apply text-sm;
+      }
+    }
+    //Button
+  
+    .btn,
+    input[type='submit'] {
+      @apply font-ptsemi text-base rounded-md bg-primary py-2 px-6 text-white border-2 border-primary;
+      &:hover {
+        @apply bg-transparent text-primary transition-colors ease-in-out duration-300;
+      }
+      &.btn_md {
+        @apply text-xl font-ptreg;
+      }
+      &.btn_sm {
+        @apply text-base font-ptreg  py-1 px-4;
+      }
+      &.btn_trans {
+        @apply bg-transparent text-primary;
+        &:hover {
+          @apply bg-primary text-white;
+        }
+      }
+      &.btn_white {
+        @apply bg-transparent text-white border-white;
+        &:hover {
+          @apply bg-white text-primary;
+        }
+      }
+    }
+    @screen lg {
+      .btn,
+      input[type='submit'] {
+        @apply font-ptsemi text-lg py-2 px-10;
+        &.btn_md {
+          @apply text-2xl;
+        }
+        &.btn_sm {
+          @apply text-lg py-1 px-6;
+        }
+      }
+    }
+    .button {
+        @apply px-4 py-2 border border-transparent bg-primary rounded-md shadow-sm text-base font-medium text-white;
+        &:hover{
+          @apply bg-transparent text-primary border-primary;
+        }
+    }
+    .button-md {
+        @apply px-4 py-2 border-2 text-lg border-transparent rounded-md shadow-sm font-medium text-white;
+        &:hover {   @apply bg-transparent border-orange-50 text-orange-50;}
+    }
+    .button-md-white {
+        @apply text-white bg-transparent border-white;
+        &:hover {
+          @apply bg-white text-orange-50 border-orange-50 transition-all ease-in-out duration-100;
+        }   
+    }
+    .button-xl {
+        @apply font-ptreg;
+    }
+    @screen lg {        
+        .button-md {
+            @apply px-8 py-2 border-2 text-xl;
+        }
+        .button-xl {
+            @apply px-10 py-3 text-2xl font-ptreg;
+        }
+    }
+
+    /* Links */
+    a,
+    .text_link {
+      @apply text-black-0 transition-all ease-in-out duration-300;
+      &:hover {
+        @apply text-primary;
+      }
+      &.underline {
+        @apply underline;
+      }
+      &.black {
+        @apply text-black-0;
+        &:hover {
+          @apply text-primary;
+        }         
+      }
+      &.white { 
+        @apply text-white;
+        &:hover {
+          @apply text-primary;
+        }         
+      }
+      &.blue {
+        @apply text-secondary;
+        &:hover {
+          @apply text-primary;
+        }         
+      }
+      &> img {
+        @apply ml-4 transition-all ease-in-out duration-300;
+      }
+      &.link:hover {
+        &> img {
+          @apply ml-6 transition-all ease-in-out duration-300;
+        } 
+      }
+    }
+    .bg-secondary {
+      a {
+        @apply text-white;
+        &:hover {
+          @apply text-white
+        }
+      }
+    }
+    .tab-content {
+      p {
+        a {
+          @apply text-primary;
+        }
+        h3 {
+          @apply text-primary font-ptreg text-lg mt-4; 
+        }
+      }
+    }
+}
+
+body {
+    font-family: 'poppins-regular';
+    font-size: 16px;
+} 
+.custom_slant_cont {
+    min-height: 70vh;
+    height: 570px;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .dark\:bg-black {
+    background-color: black;
+  }
+}

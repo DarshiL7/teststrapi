@@ -1,0 +1,127 @@
+
+@mixin font-face($style-name, $file, $category:"") {
+    $filepath: "../fonts/" + $file;
+    @font-face {
+        font-family: "#{$style-name}";
+        src: url($filepath + ".woff") format('woff'), url($filepath + ".woff2") format('woff2'), url($filepath + ".ttf")  format('truetype');
+    }
+    %#{$style-name} {
+        font: {
+            @if $category != "" {
+                family: "#{$style-name}", #{$category};
+            }
+            @else {
+                family: "#{$style-name}";
+                weight: normal; 
+            }
+        }
+    }
+}
+@mixin border-radius($radius...) { 
+    border-radius: $radius; 
+    -moz-border-radius: $radius; 
+    -webkit-border-radius: $radius;
+}
+
+@mixin box-shadow($shadows...) {
+    -o-box-shadow: $shadows;
+    -ms-box-shadow: $shadows;
+    -moz-box-shadow: $shadows;
+    -webkit-box-shadow: $shadows;
+    box-shadow: $shadows;
+}
+@mixin text-shadow($txt-shadow...) {
+    -o-text-shadow: $txt-shadow;
+    -ms-text-shadow: $txt-shadow;
+    -moz-text-shadow: $txt-shadow;
+    -webkit-text-shadow: $txt-shadow;
+    text-shadow: $txt-shadow;
+}
+@mixin transition($transition...) {
+    -o-transition: $transition;
+    -ms-transition: $transition;
+    -moz-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+@mixin linear-gradient($gradient...) {
+    background: -moz-linear-gradient($gradient);
+    background: -ms-linear-gradient($gradient);
+    background: -o-linear-gradient($gradient);
+    background: -webkit-linear-gradient($gradient);
+    background: linear-gradient($gradient);
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+@mixin transform ($origin) {
+    moz-transform: $origin;
+            -o-transform: $origin;
+        -ms-transform: $origin;
+    -webkit-transform: $origin;
+            transform: $origin;
+}
+@mixin transform-origin ($origin){
+        -webkit-transform-origin: $origin;
+        -moz-transform-origin: $origin;
+        -o-transform-origin: $origin;
+        transform-origin: $origin;
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};      
+}
+@mixin placeholder {
+    &::placeholder{ @content;}
+    &::-webkit-input-placeholder{ @content;}
+    &::-moz-placeholder{ @content;}
+    &:-ms-input-placeholder{ @content;}  
+    &:-moz-placeholder{ @content;}
+} 
+
+$breakpoints: (
+    "phone-small":  400px,
+    "phone":        576px,
+    "tablet":       768px,
+    "tablet-pro":   992px,
+    "laptop":       1200px,
+    "desktop":      1360px
+);
+
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
