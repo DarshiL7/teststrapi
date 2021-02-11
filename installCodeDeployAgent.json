@@ -1,8 +1,8 @@
 {
     "Parameters": {
         "commands": [
-            "cd /home/ubuntu/",
-            "mkdir new_folder"
+            "cd /home/ubuntu/newfodler/",
+            "sudo mkdir new_folder"
         ]
     }
 }
