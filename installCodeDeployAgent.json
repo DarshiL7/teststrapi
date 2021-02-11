@@ -1,0 +1,8 @@
+{
+    "Parameters": {
+        "commands": [
+            "cd /home/ubuntu/",
+            "mkdir new_folder"
+        ]
+    }
+}
