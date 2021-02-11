@@ -3,7 +3,7 @@
         "commands": [
             "cd /home/ubuntu/strapi-nuxt/stage",
             "git add .",
-            "git commit -m 'code from ec2 stage branch'",
+            "git commit -m '$CODEBUILD_BUILD_NUMBER'",
             "git push https://github.com/radixweb-boilerplate/strapi-nuxt.git"
         ]
     }
