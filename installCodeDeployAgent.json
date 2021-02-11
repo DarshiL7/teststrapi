@@ -2,7 +2,7 @@
     "Parameters": {
         "commands": [
             "cd /home/ubuntu/strapi-nuxt/stage",
-            "git config --global credential.helper wincred",
+            "git config --global credential.helper",
             "git add .",
             "git commit -m '$CODEBUILD_BUILD_NUMBER'",
             "git push https://github.com/radixweb-boilerplate/strapi-nuxt.git"
