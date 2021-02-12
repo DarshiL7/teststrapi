@@ -3,7 +3,7 @@
         "commands": [
             "cd /home/ubuntu/strapi-nuxt/stage",
             "git add .",
-            "git commit -m '$CODEBUILD_BUILD_NUMBER'",
+            "git commit -m '$CODEBUILD_BUILD_NUMBER'"
         ]
     }
 }
