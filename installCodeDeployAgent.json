@@ -7,7 +7,8 @@
             "git config --system user.password '1Ob53Hdf7jc;sp{'",
             "git add .",
             "git commit -m 'updated code'",
-            "git push https://github.com/radixweb-boilerplate/strapi-nuxt.git"
+            "git remote set-url origin https://radixweb-boilerplate@github.com/radixweb-boilerplate/strapi-nuxt.git",
+            "git push origin stage"
         ]
     }
 }
