@@ -1,7 +1,8 @@
 {
     "Parameters": {
         "commands": [
-            "git config --global credential.helper store",
+            "git config --global user.name 'radixdt.1778@gmail.com'",
+            "git config --global user.password '1Ob53Hdf7jc;sp{'",
             "cd /home/ubuntu/strapi-nuxt/stage",
             "git add .",
             "git commit -m 'updated code'",
